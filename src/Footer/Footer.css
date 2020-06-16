@@ -1,0 +1,14 @@
+.logo img{
+    height: 40px;
+    width: 80px;
+ }
+ .footer{
+     background-color: black;
+     color: gray;
+     font-size: 12px;
+     
+ }
+ .footerTopContent p{
+     margin: 0px;
+
+ }
