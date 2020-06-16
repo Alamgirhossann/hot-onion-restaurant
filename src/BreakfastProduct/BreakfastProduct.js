@@ -1,14 +1,16 @@
 import React from 'react';
 
 const BreakfastProduct = (props) => {
-    console.log(props.products);
+    const {name , price, image, category} = props.products;
     return (
         <div>
             <div>
-                <img src={props.products.image} alt=""/>
+                {image && <img src={require(`../Image/Breakfast/${image}`)} alt=""/>}
+                <h4>{name}</h4>
+                    
             </div>
             <div>
-                <h4>{props.products.name}</h4>
+                <h4>{price}</h4>
             </div>
    
            
