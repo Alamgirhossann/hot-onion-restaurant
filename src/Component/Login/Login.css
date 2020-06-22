@@ -1,0 +1,29 @@
+.form-organize input{
+    display: block;
+    margin: 0% 45%;
+}
+.login-header{
+    text-align: center;
+    padding-top: 40px;
+}
+
+.form-organize button{
+    margin: 0% 45%;
+}
+
+.login{
+    background-image: url(../../Image/bannerbackground.png);
+    height: 500px;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    margin-top: 2%;
+}
+.crtAccountBtn{
+    margin: 0% 43%;
+    font-weight: 500;
+}
+.loginBtn{
+    margin: 0% 43%;
+    
+}

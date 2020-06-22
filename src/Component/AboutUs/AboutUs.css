@@ -1,0 +1,12 @@
+.about{
+    text-align: justify;
+    background-image: url(../../Image/bannerbackground.png);
+    background-size: 100%;
+    height: auto;
+    padding-top: 40px;
+    font-weight: 500;
+}
+.about h3{
+    text-align: center;
+    text-decoration: underline;
+}

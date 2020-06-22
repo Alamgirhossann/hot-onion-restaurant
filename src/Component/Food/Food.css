@@ -1,0 +1,16 @@
+.foodLink {
+    color: black;
+    margin:0% 8%;
+    font-weight: 700;
+    font-size: 20px; 
+    padding: 5px;  
+}
+.link{
+    margin: 2% 25% 0% 25%;
+}
+.foodLink:hover{
+    color: white;
+    background-color: red;
+    text-decoration: none;
+    border-radius: 10px;
+}

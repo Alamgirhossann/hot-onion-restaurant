@@ -1,0 +1,28 @@
+.haveAccount{
+    text-align: center;
+    font-weight: 500;
+}
+.form-organize input{
+    display: block;
+    margin: 0% 45%;
+}
+.login-header{
+    text-align: center;
+    padding-top: 40px;
+}
+
+.form-organize button{
+    margin: 0% 45%;
+}
+
+.signUp{
+    background-image: url(../../Image/bannerbackground.png);
+    height: 500px;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    margin-top: 2%;
+}
+.signUp h2{
+    text-align: center;
+}

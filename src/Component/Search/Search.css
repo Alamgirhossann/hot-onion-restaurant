@@ -1,0 +1,19 @@
+.search{
+    background-image: url(../../Image/bannerbackground.png);
+    height: 450px;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    
+}
+.heading {
+    text-align: center;
+    padding-top: 9%;    
+}
+.search-input{
+    margin-left: 38%;
+    
+}
+.subBnt{
+    margin-left: 2%;
+}

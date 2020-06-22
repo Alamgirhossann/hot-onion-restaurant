@@ -1,0 +1,46 @@
+.header{
+  background-color: blanchedalmond;
+}
+ .logo{
+    height: 50px;
+    width: 130px;
+ }
+ 
+ .header2{
+    padding-left: 10%;
+    width: 100%;
+ }
+ .header button{
+    margin-left: 2%;
+    margin-top: 20px;
+    border: none;
+    border-radius: 5px;
+    
+  
+ }
+ .header button:hover{
+    background-color: rgb(226, 37, 4);
+    color: white;
+   
+ }
+ 
+ .signBtn{
+    margin-bottom: 10px;
+    padding-left: 20px;
+    /* width: 100%; */
+    
+ }
+ .signBtn a{
+    margin-left: 2%;
+    border-radius: 5px;
+    padding: 3px;
+    color: black;
+    font-weight: 600;
+    
+ }
+ .signBtn a:hover{
+    text-decoration: none;
+    color: white;
+    background-color: red;
+ }
+ 
