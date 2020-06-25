@@ -16,7 +16,7 @@ import AddCart from './Component/AddCart/AddCart';
 import { AuthContextProvider } from './Component/useAuth/useAuth';
 import DeliveryDetail from './Component/DeliveryDetail/DeliveryDetail';
 import Map from './Component/Map/Map';
-import Breakfast from './Component/Breakfast/Breakfast';
+
 
 
 
@@ -42,7 +42,7 @@ function App() {
             <Route path="/signUp">
               <SignUp></SignUp>
             </Route>
-            <Route path="/addCart">
+            <Route path="/addCart/:id">
               <AddCart></AddCart>
             </Route>
             <Route path="/deliveryDetail">

@@ -1,40 +1,68 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import './Food.css';
 import { useState } from 'react';
-import Breakfast from '../Breakfast/Breakfast';
-import foods from '../../duplicateData/foods';
+import Foods from '../../duplicateData/Foods';
+import { useEffect } from 'react';
+import Products from '../Products/Products';
 
 const Food = () => {
-    const first6 = foods.slice(0, 6);
-    const [product, setProduct] = useState(first6);
-    const [cart, setCart] = useState([]);
+    const [data , setData] = useState([]);
+    const [activeEle, setActiveEle]= useState("breakfast");
 
-        
-        const handleAddProduct = (product) => {
-        console.log("product added", product);
-        const newCart = [...cart, product];
-        setCart(newCart);
-    }
+    const catHandle = (categoryName) => {
+        const getFilterData = Foods.find((cat) => cat.title === categoryName);
+        setData([...getFilterData.items]);
+        setActiveEle(categoryName);
+
+    };
+
+    useEffect(() => {
+		setData([...Foods[0].items]);
+	}, []);
     
      
     return (
-        <div className='link'>
-            <div >
-                <Link className='foodLink' to='/breakfast'>Breakfast</Link>
-                <Link className='foodLink' to='/lunch'>Lunch</Link>
-                <Link className='foodLink' to='/dinner'>Dinner</Link>
-            </div>
-            <div>
-                {
-                    product.map(pd => <Breakfast 
-                        product = {pd}
-                        handleAddProduct = {handleAddProduct}
-                        ></Breakfast>)
-                }
-            </div>
-        </div>
-    );
+		<div className="products-section">
+			<div className="container">
+				<div className="row">
+					<div className="col-md-12">
+						<div className="products-cat-title">
+							<ul>
+								<li onClick={() => catHandle("breakfast")}>
+									<span
+										className={`${activeEle === "breakfast" ? "active" : " "}`}>
+										Breakfast
+									</span>
+								</li>
+								<li onClick={() => catHandle("lunch")}>
+									<span className={`${activeEle === "lunch" ? "active" : " "}`}>
+										Lunch
+									</span>
+								</li>
+								<li onClick={() => catHandle("dinner")}>
+									<span
+										className={`${activeEle === "dinner" ? "active" : " "}`}>
+										Dinner
+									</span>
+								</li>
+							</ul>
+						</div>
+						<div className="products">
+							<div className="row">
+                                {
+                                data.map(pd => 
+								<div className="col-md-4">
+                                    <Products product = {pd}/>
+                                </div>
+                                )}
+							</div>
+						</div>
+						
+					</div>
+				</div>
+			</div>
+		</div>
+	);
 };
 
 export default Food;
