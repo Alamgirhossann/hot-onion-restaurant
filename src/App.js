@@ -16,6 +16,7 @@ import AddCart from './Component/AddCart/AddCart';
 import { AuthContextProvider } from './Component/useAuth/useAuth';
 import DeliveryDetail from './Component/DeliveryDetail/DeliveryDetail';
 import Map from './Component/Map/Map';
+import Breakfast from './Component/Breakfast/Breakfast';
 
 
 
@@ -50,6 +51,9 @@ function App() {
             <Route path="/map">
               <Map></Map>
             </Route>
+            {/* <Route path='/breakfast'>
+              <Breakfast></Breakfast>
+            </Route> */}
             <Route path="*">
               <NotFound></NotFound>
             </Route>

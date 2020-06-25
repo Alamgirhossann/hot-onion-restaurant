@@ -1,0 +1,40 @@
+.main-container{
+    display: flex;
+}
+.map-container{
+    width: 60%;
+    margin: 50px 0px 0px 50px;
+}
+.info-container{
+    width: 40%;
+    
+}
+.info-container img{
+    height: 100px;
+    width: 150px;
+    margin-top: 50px;
+}
+.rider-info{
+    display: flex;
+   
+}
+.rider-info img{
+    height: 100px;
+    width: 100px;
+}
+.rider-img{
+    width: 50%;
+}
+.rider-name{
+    width: 50%;
+    padding-top: 70px;
+}
+.contact-btn{
+    width: 70%;
+    color: white;
+    background-color: red;
+    padding: 10px;
+    border-radius: 20px;
+    border: none;
+    margin-top: 10px;
+}

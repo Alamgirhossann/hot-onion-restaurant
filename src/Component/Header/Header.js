@@ -6,6 +6,7 @@ import './Header.css';
 import { useAuth } from '../useAuth/useAuth';
 
 const Header = () => {
+    
     const auth = useAuth();
     return (
        

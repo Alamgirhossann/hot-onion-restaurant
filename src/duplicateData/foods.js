@@ -1,7 +1,8 @@
 var foods =[
     {
+    key: 'adfas',
     id:'1',    
-    image: '../Breakfast/breakfast1.png',
+    img: '../Breakfast/breakfast1.png',
     name: 'Begel and cream cheese',
     productDetail:'How we dream about out future',
     category:'Breakfast',
@@ -10,8 +11,9 @@ var foods =[
 },
 
 {
+    key: 'adfasjj',
     id:'2', 
-    image: '../Breakfast/breakfast2.png',
+    img: '../Breakfast/breakfast2.png',
     name: 'Breakfast sandwich',
     productDetail:'How we dream about out future',
     category:'Breakfast',
@@ -20,8 +22,9 @@ var foods =[
 },
 
 {
+    key: 'adfasp',
     id:'3', 
-    image: '../Breakfast/breakfast3.png',
+    img: '../Breakfast/breakfast3.png',
     name: 'Baked chiken',
     productDetail:'How we dream about out future',
     category:'Breakfast',
@@ -30,8 +33,9 @@ var foods =[
 },
 
 {
+    key: 'adfps',
     id:'4',
-    image: '../Breakfast/breakfast4.png',
+    img: '../Breakfast/breakfast4.png',
     name: 'Eggs benedict',
     productDetail:'How we dream about out future',
     category:'Breakfast',
@@ -40,8 +44,9 @@ var foods =[
 },
 
 {
+    key: 'adfasl',
     id:'5',
-    image: '../Breakfast/breakfast5.png',
+    img: '../Breakfast/breakfast5.png',
     name: 'Toast croissant fried egg',
     productDetail:'How we dream about out future',
     category:'Breakfast',
@@ -50,8 +55,9 @@ var foods =[
 },
 
 {
+    key: 'adfask',
     id:'6',
-    image: '../Breakfast/breakfast6.png',
+    img: '../Breakfast/breakfast6.png',
     name: 'Full breakfast fried egg toast brunch',
     productDetail:'How we dream about out future',
     category:'Breakfast',
@@ -60,8 +66,9 @@ var foods =[
 },
 
 {
+    key: 'adfasm',
     id:'7',
-    image: '../lunch/lunch1.png',
+    img: '../lunch/lunch1.png',
     name: 'Healthy Meal plan',
     productDetail:'How we dream about out future',
     category:'Lunch',
@@ -71,8 +78,9 @@ var foods =[
 },
 
 {
+    key: 'adfasg',
     id:'8',
-    image: '../lunch/lunch2.png',
+    img: '../lunch/lunch2.png',
     name: 'Fried chiken bento',
     productDetail:'How we dream about out future',
     category:'Lunch',
@@ -81,8 +89,9 @@ var foods =[
 },
 
 {
+    key: 'adfasaa',
     id:'9',
-    image: '../lunch/lunch3.png',
+    img: '../lunch/lunch3.png',
     name: 'Tarragon-rubbed salmon',
     productDetail:'How we dream about out future',
     category:'Lunch',
@@ -91,8 +100,9 @@ var foods =[
 },
 
 {
+    key: 'adfasuu',
     id:'10',
-    image: '../lunch/lunch4.png',
+    img: '../lunch/lunch4.png',
     name: 'Indian Lunch',
     productDetail:'How we dream about out future',
     category:'Lunch',
@@ -101,8 +111,9 @@ var foods =[
 },
 
 {
+    key: 'adfasq',
     id:'11',
-    image: '../lunch/lunch5.png',
+    img: '../lunch/lunch5.png',
     name: 'Beef steak',
     productDetail:'How we dream about out future',
     category:'Lunch',
@@ -111,8 +122,9 @@ var foods =[
 },
 
 {
+    key: 'adfasbb',
     id:'12',
-    image: '../lunch/lunch6.png',
+    img: '../lunch/lunch6.png',
     name: 'Honey-Soy-glazed salmon with peppers',
     productDetail:'How we dream about out future',
     category:'Lunch',
@@ -120,8 +132,9 @@ var foods =[
     make: 'By Red Onion Restaurant'
 },
 {
+    key: 'adfasv',
     id:'13',
-    image: '../Dinner/dinner1.png',
+    img: '../Dinner/dinner1.png',
     name: 'Salmon with grapefruit and lentil salad',
     productDetail:'How we dream about out future',
     category:'Lunch',
@@ -130,8 +143,9 @@ var foods =[
 },
 
 {
+    key: 'adfasff',
     id:'14',
-    image: '../Dinner/dinner2.png',
+    img: '../Dinner/dinner2.png',
     name: 'Lemony salmon piccata',
     productDetail:'How we dream about out future',
     category:'Lunch',
@@ -140,8 +154,9 @@ var foods =[
 },
 
 {
+    key: 'adfasss',
     id:'15',
-    image: '../Dinner/dinner3.png',
+    img: '../Dinner/dinner3.png',
     name: 'Pork tenderloin with quinoa pilaf',
     productDetail:'How we dream about out future',
     category:'Lunch',
@@ -150,8 +165,9 @@ var foods =[
 },
 
 {
+    key: 'adfasnnn',
     id:'16',
-    image: '../Dinner/dinner4.png',
+    img: '../Dinner/dinner4.png',
     name: 'French fries with cheese',
     productDetail:'How we dream about out future',
     category:'Lunch',
@@ -160,8 +176,9 @@ var foods =[
 },
 
 {
+    key: 'adfas55',
     id:'17',
-    image: '../Dinner/dinner5.png',
+    img: '../Dinner/dinner5.png',
     name: 'Garlic butter baked salmon',
     productDetail:'How we dream about out future',
     category:'Lunch',
@@ -170,8 +187,9 @@ var foods =[
 },
 
 {
+    key: 'ad55fas',
     id:'18',
-    image: '../Dinner/dinner6.png',
+    img: '../Dinner/dinner6.png',
     name: 'Baked chiken',
     productDetail:'How we dream about out future',
     category:'Lunch',

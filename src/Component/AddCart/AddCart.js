@@ -1,20 +1,37 @@
 import React from 'react';
 import './AddCart.css'
-import { Link } from 'react-router-dom';
-import Login from '../Login/Login';
-import { auth } from 'firebase';
 import { useAuth } from '../useAuth/useAuth';
+import { useParams } from 'react-router-dom';
+import Breakfast from '../Breakfast/Breakfast';
+import foods from '../../duplicateData/foods';
+
+
 const AddCart = () => {
+    const{productKey} = useParams();
+    const product = foods.find(pd => pd.key === productKey);
     const auth = useAuth();
+   
+
     return (
         <div>
-            <h5>this is cart</h5>
+            <div>
                 
+                <p>{product.name}</p>
+                <p>{product.id}</p>
+                <p>{product.category}</p>
+                <p>{product.made}</p>
+                <p>{product.price}</p>
                     { auth.user ?
                         <button><a href="deliveryDetail">Add Cart</a></button>
                         :<button ><a href="login">Add Cart</a></button>
 
                     }
+            </div>
+            <div>
+
+            </div>
+                
+                   
                
           
         </div>

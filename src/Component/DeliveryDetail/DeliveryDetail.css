@@ -1,18 +1,31 @@
 .inputBox{
     width: 80%;
     margin: 10px 30px;
-    box-shadow: 1px 3px 10px lightgray;
+    box-shadow: 2px 3px 10px lightgray;
+    border: none;
 }
 .input-container{
-    width: 60%;
-    border-top: 1px solid gray;
-    float: left;
+    width: 60%;    
 }
-.delivery-container h4{
+.input-container h4{
     margin: 30px 0px 0px 30px;
-    
+    text-decoration: underline;    
+}
+.delivery-container{
+    display: flex;
 }
 .review-Cart{
     text-align: center;
-    
+   
+    width: 40%;   
+}
+.review-Cart h4{
+    margin: 30px 0px 0px 30px;
+}
+.delivery-btn{
+    border: none;
+    padding: 10px;
+    background-color: red;
+    border-radius: 20px;
+    color: white;
 }
