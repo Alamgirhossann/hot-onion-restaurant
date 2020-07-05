@@ -29,7 +29,7 @@ const Map = () => {
                         </div>
                         
                     </div>
-                    <button className='contact-btn'>Contact</button>
+                    <button id='contact-btn'>Contact</button>
                 </div>
             </div>
         </div>

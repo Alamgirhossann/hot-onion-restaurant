@@ -27,7 +27,7 @@
  .signBtn{
     margin-bottom: 10px;
     padding-left: 20px;
-    /* width: 100%; */
+   
     
  }
  .signBtn a{
@@ -42,5 +42,13 @@
     text-decoration: none;
     color: white;
     background-color: red;
+ }
+ #signUp-btn{
+    outline: none;
+    color: white;
+    background-color: red;
+    font-weight: 600;
+    padding: 10px 15px;
+    border-radius: 20px;
  }
  

@@ -3,6 +3,7 @@
     margin: 10px 30px;
     box-shadow: 2px 3px 10px lightgray;
     border: none;
+    outline: none;
 }
 .input-container{
     width: 60%;    
@@ -13,6 +14,7 @@
 }
 .delivery-container{
     display: flex;
+    margin-top: 70px;
 }
 .review-Cart{
     text-align: center;
@@ -28,4 +30,15 @@
     background-color: red;
     border-radius: 20px;
     color: white;
+    outline: none;
+    font-weight: 700;
+}
+.review-Cart button{
+    border: none;
+    outline: none;
+    padding: 10px;
+    background-color:  red;
+    border-radius: 20px;
+    color: white;
+    
 }

@@ -84,7 +84,7 @@ const Foods = [
 			},
 			{
 				id: 12,
-				name: "Tarang-Rubbed-Salman",
+				name: "Tarang-Rubbed-Salmon",
 				imageUrl: "../Image/lunch/lunch3.png",
 				title: "How we dream about out future",
 				description:

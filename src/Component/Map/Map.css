@@ -1,5 +1,6 @@
 .main-container{
     display: flex;
+    margin-top: 70px;
 }
 .map-container{
     width: 60%;
@@ -29,7 +30,7 @@
     width: 50%;
     padding-top: 70px;
 }
-.contact-btn{
+#contact-btn{
     width: 70%;
     color: white;
     background-color: red;
@@ -37,4 +38,5 @@
     border-radius: 20px;
     border: none;
     margin-top: 10px;
+    outline: none;
 }

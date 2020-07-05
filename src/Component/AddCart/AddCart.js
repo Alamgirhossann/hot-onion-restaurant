@@ -1,23 +1,34 @@
 import React from 'react';
 import './AddCart.css'
-import { useAuth } from '../useAuth/useAuth';
 import { useParams } from 'react-router-dom';
 import { useState } from 'react';
 import { useEffect } from 'react';
 import Foods from '../../duplicateData/Foods';
-import { auth } from 'firebase';
 
 
-
-const AddCart = ({ cart, addToCart, minusItem }) => {
+const AddCart = (props) => {
    
     const{id} = useParams();
     const [product, setProduct] = useState([]);
+    const [quantity, setQuantity]= useState(1);
+    const [cart, setCart]= useState([]);
+
+   
+
+    const handleAddQuantity =()=>{
+        setQuantity(quantity+1)
+    };
+
+    const handleRemoveQuantity=()=>{
+        if(quantity === 0){
+            return 0
+        }
+        setQuantity(quantity-1)
+    };
     
-        //GET TARGET ITEM
         useEffect(() => {
             const tempArray = [];
-           Foods.map((x) => {
+           Foods.find((x) => {
                 return x.items.forEach((j) => tempArray.push(j));
             });
             const targetProduct = tempArray.find(
@@ -26,11 +37,11 @@ const AddCart = ({ cart, addToCart, minusItem }) => {
             setProduct(targetProduct);
         }, [id]);
     
-        //  const updateQty = cart.find((x) => x.id.toString() === id.toString());
-    
+        const handleAddToCart =()=>{
+            const newCart=([...cart, id])
+            setCart(newCart);
+        }
         const { name, imageUrl, description, price } = product;
-        const auth = useAuth();
-   
 
                 return (
                     <div className="product-details-page">
@@ -44,24 +55,16 @@ const AddCart = ({ cart, addToCart, minusItem }) => {
                                             <h2>
                                                 $ <span>{price}</span>
                                             </h2>
-                                            {/* <div className="product-detail-qty">
-                                                <button
-                                                    onClick={() => minusItem(product)}
-                                                    disabled={!updateQty ? true : false}>
-                                                    -
-                                                </button>
-                                                <span>
-                                                    {updateQty && updateQty.quantity ? updateQty.quantity : 0}
-                                                </span>
-                                                <button onClick={() => addToCart(product)}>+</button>
-                                            </div> */}
+                                            <div className="product-detail-qty">
+                                                <button onClick={handleRemoveQuantity} >-</button>
+                                                <span>{quantity}</span>
+                                                <button onClick={handleAddQuantity}>+</button>
+                                            </div>
                                         </div>
                                         <div className="add-cart">
-                                            { auth.user ?
-                                                <button><a href="/deliveryDetail">Add to Cart</a></button>
-                                                :<button><a href="/login">Add to Cart</a></button>
-                                            }
+                                           <button onClick={handleAddToCart}>Add to Proceed</button>
                                         </div>
+                <p>cart Item: {cart.length}</p>
                                     </div>
                                 </div>
                                 <div className="col-md-6">

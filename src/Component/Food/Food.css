@@ -72,3 +72,14 @@
 	background: #f91a45 !important;
 	transition: 0.4s all ease-in-out;
 }
+.checkout-btn{
+	text-align: center;
+	color: white;
+	background-color: lightgrey;
+	padding: 15px 25px ;
+	margin: 0% 40%;
+	border-radius: 20px;
+}
+.checkout-btn:hover{
+	text-decoration: none;
+}

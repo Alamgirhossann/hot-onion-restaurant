@@ -4,6 +4,7 @@ import { useState } from 'react';
 import Foods from '../../duplicateData/Foods';
 import { useEffect } from 'react';
 import Products from '../Products/Products';
+import { Link } from 'react-router-dom';
 
 const Food = () => {
     const [data , setData] = useState([]);
@@ -57,7 +58,11 @@ const Food = () => {
                                 )}
 							</div>
 						</div>
-						
+						<div >
+							<Link to='/deliveryDetail'>
+								<span className ='checkout-btn'>Checkout Your Food </span>
+							</Link>
+						</div>
 					</div>
 				</div>
 			</div>
