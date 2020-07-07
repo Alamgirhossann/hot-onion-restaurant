@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './App.css';
 import {
   BrowserRouter as Router,
@@ -21,10 +21,12 @@ import Map from './Component/Map/Map';
 
 
 function App() {
+  const [cart, setCart]= useState([]);
   return (
     <div >
       <AuthContextProvider>
-        <Header></Header>
+        <Header cart={cart}
+        ></Header>
         <Router>
           <Switch>
             <Route path="/home">
@@ -43,7 +45,9 @@ function App() {
               <SignUp></SignUp>
             </Route>
             <Route path="/addCart/:id">
-              <AddCart></AddCart>
+              <AddCart cart={cart}
+              setCart={setCart}
+              ></AddCart>
             </Route>
             <Route path="/deliveryDetail">
               <DeliveryDetail></DeliveryDetail>
@@ -51,9 +55,6 @@ function App() {
             <Route path="/map">
               <Map></Map>
             </Route>
-            {/* <Route path='/breakfast'>
-              <Breakfast></Breakfast>
-            </Route> */}
             <Route path="*">
               <NotFound></NotFound>
             </Route>

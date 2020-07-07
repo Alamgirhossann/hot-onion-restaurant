@@ -1,6 +1,6 @@
 const Foods = [
 	{
-		id: 1,
+		
 		title: "breakfast",
 		items: [
 			{
@@ -61,7 +61,7 @@ const Foods = [
 	},
 
 	{
-		id: 2,
+		
 		title: "lunch",
 		items: [
 			{
@@ -122,7 +122,7 @@ const Foods = [
 	},
 
 	{
-		id: 3,
+	
 		title: "dinner",
 		items: [
 			{

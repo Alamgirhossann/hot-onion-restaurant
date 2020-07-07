@@ -4,10 +4,9 @@ import './Header.css';
 import { useAuth } from '../useAuth/useAuth';
 import Cart from '../Cart/Cart';
 import { useState } from 'react';
+import { getDatabaseCart } from '../../utilities/databaseManager';
 
-const Header = () => {
-    const [count, setCount] =useState(0);
-    
+const Header = (props) => {
     const auth = useAuth();
     return (
        
@@ -17,9 +16,11 @@ const Header = () => {
                         <a href="/home"><img className='logo' src={logo} alt=""/></a>
                     </div>
                     <div className="col-sm-3 signBtn">
-                            <div>
-                                <Cart count={count}></Cart>
-                            </div>
+                           
+                        <span > 
+                            <Cart cart={props.cart}></Cart>
+                        </span>
+                            
                     
                             {
                                 auth.user ?    <a  href = '/Login'>Logout</a>

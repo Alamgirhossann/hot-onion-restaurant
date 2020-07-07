@@ -4,14 +4,16 @@ import {  faCartPlus } from '@fortawesome/free-solid-svg-icons'
 
 
 const Cart = (props) => {
-    const count = props.count;
-   
+    const cart = props.cart;
+   console.log(props);
     return (
         
         <div>
             <span className="cart-icon">
-          <FontAwesomeIcon icon={faCartPlus} /> {count}
-        </span> 
+          <FontAwesomeIcon icon={faCartPlus} /> {cart.length}
+
+        </span>
+       
         </div>
     );
 };

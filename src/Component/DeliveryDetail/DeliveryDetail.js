@@ -1,8 +1,8 @@
 import React from 'react';
 import './DeliveryDetail.css';
 import { Link } from 'react-router-dom';
-import Cart from '../Cart/Cart';
 import { useState } from 'react';
+import CartItem from '../CartItem/CartItem';
 
 const DeliveryDetail = () => {
     const [address, setAddress] = useState({
@@ -40,7 +40,7 @@ const DeliveryDetail = () => {
                 </div>
                 <div className='review-Cart'>
                     <h4>From gulshan 102 road</h4>
-                    <Cart></Cart>
+                    <CartItem></CartItem>
                     <Link to='/map'>
                         <button className='delivery-btn'>Place Order</button>
                     </Link>
