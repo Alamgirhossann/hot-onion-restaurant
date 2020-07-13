@@ -20,8 +20,11 @@ import Map from './Component/Map/Map';
 
 
 
+
 function App() {
   const [cart, setCart]= useState([]);
+  const [product, setProduct] = useState([])
+  
   return (
     <div >
       <AuthContextProvider>
@@ -47,10 +50,15 @@ function App() {
             <Route path="/addCart/:id">
               <AddCart cart={cart}
               setCart={setCart}
-              ></AddCart>
+             ></AddCart>
             </Route>
             <Route path="/deliveryDetail">
-              <DeliveryDetail></DeliveryDetail>
+              <DeliveryDetail
+               product={product}
+               setProduct={setProduct}
+               cart={cart}
+               setCart={setCart}
+              ></DeliveryDetail>
             </Route>
             <Route path="/map">
               <Map></Map>

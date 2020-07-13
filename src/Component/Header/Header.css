@@ -1,5 +1,5 @@
 .header{
-  background-color: blanchedalmond;
+  background-color: white;
 }
  .logo{
     height: 50px;
@@ -10,22 +10,10 @@
     padding-left: 10%;
     width: 100%;
  }
- .header button{
-    margin-left: 2%;
-    margin-top: 20px;
-    border: none;
-    border-radius: 5px;
-    
-  
- }
- .header button:hover{
-    background-color: rgb(226, 37, 4);
-    color: white;
-   
- }
+
  
- .signBtn{
-    margin-bottom: 10px;
+ .signBtn {
+    margin-top: 15px;
     padding-left: 20px;
    
     
@@ -51,4 +39,5 @@
     padding: 10px 15px;
     border-radius: 20px;
  }
+
  

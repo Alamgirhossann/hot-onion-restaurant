@@ -12,7 +12,7 @@ const getUser = () => {
 
 const getDataKey = () => {
     const userId = getUser();
-    return `emaJohn/carts/${userId}`
+    return `red-onion/carts/${userId}`
 }
 
 // push to local storage: a temporary place for database
@@ -22,15 +22,15 @@ const getDatabaseCart = () => {
     return JSON.parse(data);
 }
 
-const addToDatabaseCart = (key, count) => {
+const addToDatabaseCart = (id, quantity) => {
     const currentCart = getDatabaseCart();
-    currentCart[key] = count;
+    currentCart[id] = quantity;
     localStorage.setItem(getDataKey(), JSON.stringify(currentCart));
 }
 
-const removeFromDatabaseCart = key => {
+const removeFromDatabaseCart = id => {
     const currentCart = getDatabaseCart();
-    delete currentCart[key];
+    delete currentCart[id];
     localStorage.setItem(getDataKey(), JSON.stringify(currentCart));
 }
 

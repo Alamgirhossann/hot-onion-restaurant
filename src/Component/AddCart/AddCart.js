@@ -4,15 +4,15 @@ import { useParams } from 'react-router-dom';
 import { useState } from 'react';
 import { useEffect } from 'react';
 import Foods from '../../duplicateData/Foods';
-import Cart from '../Cart/Cart';
+import CartItem from '../CartItem/CartItem';
+import { addToDatabaseCart } from '../../utilities/databaseManager';
 
 
 const AddCart = (props) => {
-   console.log(props);
+  
     const{id} = useParams();
     const [product, setProduct] = useState([]);
     const [quantity, setQuantity]= useState(1);
-   console.log(quantity);
 
     const handleAddQuantity =()=>{
         setQuantity(quantity+1)
@@ -36,23 +36,26 @@ const AddCart = (props) => {
             setProduct(targetProduct);
         }, [id]);
     
-        const handleAddToCart =()=>{
-            const exist=props.cart.find((item)=>item.id === id);
-            console.log(exist);
-            if(exist){
-               exist.quantity = exist.quantity + quantity
-             const index =  props.cart.map(item => item.id).indexOf(id);
-                console.log(index);
-               props.cart[index]= exist;
-              console.log(props.cart);
-               
-            }
-            else{
-                props.setCart([...props.cart, {id, quantity}])
-            }
+        const handleAddToCart =(product)=>{
+            const toBeAddedId = product.id;
+            const exist = props.cart.find((item)=>item.id === toBeAddedId);
+          
+           let count = 1;
+           let newCart;
+           if(exist){
+               count = exist.quantity + quantity;
+               exist.quantity = count;
+               const others = props.cart.filter(pd => pd.id !== toBeAddedId)
+               newCart = [...others, exist]
+           }
+           else{
+               product.quantity = quantity;
+               newCart = [...props.cart, product]
+           }
+           props.setCart(newCart);
+           addToDatabaseCart(product.id, quantity);
+       }
 
-        
-        }
         const { name, imageUrl, description, price } = product;
 
                 return (
@@ -74,7 +77,7 @@ const AddCart = (props) => {
                                             </div>
                                         </div>
                                         <div className="add-cart">
-                                           <button onClick={handleAddToCart}>Add to Cart</button>
+                                           <button onClick={()=> handleAddToCart(product)}>Add to Cart</button>
                                         </div>
                                     </div>
                                 </div>
@@ -83,7 +86,10 @@ const AddCart = (props) => {
                                         <img src={imageUrl} alt="" />
                                     </div>
                                 </div>
-                                <Cart cart={props.cart}></Cart>
+                            <CartItem
+                            cart ={props.cart}
+                            product ={product}
+                            ></CartItem>
                             </div>
                             
                         </div>

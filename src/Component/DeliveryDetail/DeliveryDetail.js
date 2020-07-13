@@ -3,8 +3,13 @@ import './DeliveryDetail.css';
 import { Link } from 'react-router-dom';
 import { useState } from 'react';
 import CartItem from '../CartItem/CartItem';
+import Cart from '../Cart/Cart';
 
-const DeliveryDetail = () => {
+const DeliveryDetail = (props) => {
+    const cart = props.cart;
+    const product =props.product; 
+    
+    console.log( cart);
     const [address, setAddress] = useState({
         name: "",
         roadNo: "",
@@ -29,6 +34,7 @@ const DeliveryDetail = () => {
                 
                 <div className='input-container'>
                     <h4>Edit Delivery Detail</h4>
+                    <hr/>
                    <form onSubmit={handleSubmit}>
                     <input className='inputBox' type="text" name='Name' onChange={handleChange} placeholder='Deliver to door'/>
                     <input className='inputBox' type="text" name='roadNo' onChange={handleChange} placeholder='107 Rd No 8'/>
@@ -40,7 +46,14 @@ const DeliveryDetail = () => {
                 </div>
                 <div className='review-Cart'>
                     <h4>From gulshan 102 road</h4>
-                    <CartItem></CartItem>
+                    <CartItem
+                        product ={product}
+                        cart={cart}
+                        quantity ={props.quantity}
+                    ></CartItem>
+                    <Cart
+                        cart={cart}
+                    ></Cart>
                     <Link to='/map'>
                         <button className='delivery-btn'>Place Order</button>
                     </Link>

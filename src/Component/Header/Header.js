@@ -2,11 +2,11 @@ import React from 'react';
 import logo from '../../logo/logo2.png';
 import './Header.css';
 import { useAuth } from '../useAuth/useAuth';
-import Cart from '../Cart/Cart';
-import { useState } from 'react';
-import { getDatabaseCart } from '../../utilities/databaseManager';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import {  faCartPlus } from '@fortawesome/free-solid-svg-icons'
 
 const Header = (props) => {
+    const cart = props.cart;
     const auth = useAuth();
     return (
        
@@ -16,12 +16,10 @@ const Header = (props) => {
                         <a href="/home"><img className='logo' src={logo} alt=""/></a>
                     </div>
                     <div className="col-sm-3 signBtn">
-                           
-                        <span > 
-                            <Cart cart={props.cart}></Cart>
+                        <FontAwesomeIcon icon={faCartPlus} />  
+                        <span style={{color:'red', fontWeight:'bold'}} > 
+                         {cart.length}
                         </span>
-                            
-                    
                             {
                                 auth.user ?    <a  href = '/Login'>Logout</a>
                                 : <a href = '/Login'>Login</a>
