@@ -1,3 +1,15 @@
 .summary{
     display: flex;
+    
+}
+.section-name{
+    text-align: left;
+    margin-left: 15px;
+}
+.amount{
+    text-align: left;
+    margin-left: 20%;
+}
+.summary h4{
+    margin: 10px;
 }

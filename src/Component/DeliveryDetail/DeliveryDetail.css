@@ -27,7 +27,7 @@
 .delivery-btn{
     border: none;
     padding: 10px;
-    background-color: red;
+    background-color: #f91a45;
     border-radius: 20px;
     color: white;
     outline: none;
@@ -35,9 +35,8 @@
 }
 .review-Cart button{
     border: none;
-    outline: none;
-    padding: 10px;
-    background-color:  red;
+    outline: none;    
+    background-color: rgb(216, 214, 210) ;
     border-radius: 20px;
     color: white;
     
@@ -45,3 +44,15 @@
 .input-container hr{
     margin: 0px 135px 0px 30px;
 }
+
+.place-order-btn {
+	width: 90%;
+	border: none;
+	background: #cecece;
+	height: 55px;
+	color: #ffff;
+	font-size: 18px;
+	border-radius: 5px;
+	outline: none;
+}
+

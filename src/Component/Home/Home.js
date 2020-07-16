@@ -6,6 +6,7 @@ import Food from '../Food/Food';
 
 
 const Home = () => {
+   
     return (
         <div>
             <Search></Search>

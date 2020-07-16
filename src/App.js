@@ -13,7 +13,7 @@ import AboutUs from './Component/AboutUs/AboutUs';
 import Login from './Component/Login/Login';
 import SignUp from './Component/SignUp/SignUp';
 import AddCart from './Component/AddCart/AddCart';
-import { AuthContextProvider } from './Component/useAuth/useAuth';
+import { AuthContextProvider, PrivateRoute } from './Component/useAuth/useAuth';
 import DeliveryDetail from './Component/DeliveryDetail/DeliveryDetail';
 import Map from './Component/Map/Map';
 
@@ -23,7 +23,7 @@ import Map from './Component/Map/Map';
 
 function App() {
   const [cart, setCart]= useState([]);
-  const [product, setProduct] = useState([])
+  
   
   return (
     <div >
@@ -54,15 +54,13 @@ function App() {
             </Route>
             <Route path="/deliveryDetail">
               <DeliveryDetail
-               product={product}
-               setProduct={setProduct}
                cart={cart}
                setCart={setCart}
               ></DeliveryDetail>
             </Route>
-            <Route path="/map">
+            <PrivateRoute path="/map">
               <Map></Map>
-            </Route>
+            </PrivateRoute>
             <Route path="*">
               <NotFound></NotFound>
             </Route>

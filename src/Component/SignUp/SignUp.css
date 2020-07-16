@@ -26,3 +26,12 @@
 .signUp h2{
     text-align: center;
 }
+.signUp button{
+    border: none;
+    outline: none;
+    color: white;
+    background-color: #f91a45;
+    font-weight: 600;
+    padding: 5px 15px;
+    border-radius: 20px;
+}

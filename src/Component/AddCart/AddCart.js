@@ -4,8 +4,7 @@ import { useParams } from 'react-router-dom';
 import { useState } from 'react';
 import { useEffect } from 'react';
 import Foods from '../../duplicateData/Foods';
-import CartItem from '../CartItem/CartItem';
-import { addToDatabaseCart } from '../../utilities/databaseManager';
+import { addToDatabaseCart, getDatabaseCart } from '../../utilities/databaseManager';
 
 
 const AddCart = (props) => {
@@ -54,6 +53,7 @@ const AddCart = (props) => {
            }
            props.setCart(newCart);
            addToDatabaseCart(product.id, quantity);
+           
        }
 
         const { name, imageUrl, description, price } = product;
@@ -86,10 +86,7 @@ const AddCart = (props) => {
                                         <img src={imageUrl} alt="" />
                                     </div>
                                 </div>
-                            <CartItem
-                            cart ={props.cart}
-                            product ={product}
-                            ></CartItem>
+                           
                             </div>
                             
                         </div>

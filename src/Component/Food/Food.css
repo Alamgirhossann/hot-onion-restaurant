@@ -62,7 +62,7 @@
 
 .checkout-btn-box a {
 	height: 25px;
-	background: #cecece;
+	background: #f91a45;
 	padding: 10px 50px;
 	border-radius: 5px;
 	color: #fff;
@@ -82,4 +82,10 @@
 }
 .checkout-btn:hover{
 	text-decoration: none;
+}
+@media(max-width:768px){
+	.products-section {
+		height: 100%;
+		
+	}
 }

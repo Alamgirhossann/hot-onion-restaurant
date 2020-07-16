@@ -3,6 +3,7 @@ import map from '../../Image/map.jpg';
 import bike from '../../Image/Group 1151.png';
 import rider from '../../Image/Group 1152.png';
 import './Map.css'
+import { Link } from 'react-router-dom';
 
 const Map = () => {
     return (
@@ -21,15 +22,18 @@ const Map = () => {
                     
                     <div className='rider-info'>
                        <div className='rider-img'>
-                        <img src={rider} alt=""/>
+                            <img src={rider} alt=""/>
                        </div>
                         <div className='rider-name'>
-                        <h5>Alamgir</h5>
-                        <p>Your Rider</p>
+                            <h5>Alamgir</h5>
+                            <p>Your Rider</p>
                         </div>
-                        
                     </div>
-                    <button id='contact-btn'>Contact</button>
+                    
+                        <div>
+                        <button id='contact-btn'>Contact</button>
+                        </div>
+                  
                 </div>
             </div>
         </div>

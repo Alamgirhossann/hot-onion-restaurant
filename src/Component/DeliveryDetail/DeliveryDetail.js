@@ -4,12 +4,11 @@ import { Link } from 'react-router-dom';
 import { useState } from 'react';
 import CartItem from '../CartItem/CartItem';
 import Cart from '../Cart/Cart';
+import { processOrder } from '../../utilities/databaseManager';
 
 const DeliveryDetail = (props) => {
     const cart = props.cart;
-    const product =props.product; 
     
-    console.log( cart);
     const [address, setAddress] = useState({
         name: "",
         roadNo: "",
@@ -17,7 +16,9 @@ const DeliveryDetail = (props) => {
 		city: "",
 		instructor: ""
 		
-	});
+    });
+    
+
 	const handleChange = (e) => {
         console.log(e.target.name);
         console.log(e.target.value);
@@ -46,17 +47,31 @@ const DeliveryDetail = (props) => {
                 </div>
                 <div className='review-Cart'>
                     <h4>From gulshan 102 road</h4>
-                    <CartItem
-                        product ={product}
+                  <div>
+                  {
+                        cart.map((pd)=><CartItem
+                        product ={pd}
                         cart={cart}
-                        quantity ={props.quantity}
-                    ></CartItem>
-                    <Cart
-                        cart={cart}
-                    ></Cart>
-                    <Link to='/map'>
-                        <button className='delivery-btn'>Place Order</button>
+                        ></CartItem>)
+                    }
+                  </div>
+                 
+                    <div>
+                        <Cart
+                            cart={cart}
+                        ></Cart>
+                    </div>
+                   
+                   <div>
+                   <Link to='/map'>
+                    <button onClick={()=> processOrder(cart)}
+                        className={`${cart.length && "inCartActive"} place-order-btn`}
+                        disabled={!cart.length ? true : false}>
+                        {" "}
+                        Place Order
+				    </button>
                     </Link>
+                   </div>
                 </div>
             </div>
         

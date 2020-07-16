@@ -7,6 +7,7 @@ import Products from '../Products/Products';
 import { Link } from 'react-router-dom';
 
 const Food = () => {
+	
     const [data , setData] = useState([]);
     const [activeEle, setActiveEle]= useState("breakfast");
 
@@ -58,9 +59,10 @@ const Food = () => {
                                 )}
 							</div>
 						</div>
-						<div >
-							<Link to='/deliveryDetail'>
-								<span className ='checkout-btn'>Checkout Your Food </span>
+						<div className="checkout-btn-box">
+							<Link
+								to="/deliveryDetail">
+								<span>Checkout Your Food</span>
 							</Link>
 						</div>
 					</div>
